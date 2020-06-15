@@ -6,10 +6,9 @@ import Toolbar from '@material-ui/core/Toolbar';
 function Header(props) {
     return (
       <div className="">
-        <AppBar position="static">
+        <AppBar position="fixed">
   <Toolbar>
-    <h1>EU</h1>
-    
+    <h1>EU</h1> 
   </Toolbar>
 </AppBar>
       </div>
