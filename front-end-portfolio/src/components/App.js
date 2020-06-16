@@ -5,11 +5,9 @@ import {ThemeProvider } from '@material-ui/core/styles';import Header from './ui
 function App() {
   return (
     <ThemeProvider>
-    <div className="">
       <Header/>
       <p>Cristiane Abreu</p>
       <hr/>
-    </div>
     </ThemeProvider>
   );
 }
