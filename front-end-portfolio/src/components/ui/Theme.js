@@ -1,16 +1,22 @@
 import React from 'react'
 import { createMuiTheme } from '@material-ui/core/styles';
-import purple from '@material-ui/core/colors/purple';
-import green from '@material-ui/core/colors/green';
+//import purple from '@material-ui/core/colors/purple';
+//import green from '@material-ui/core/colors/green';
+const arcBlue = '#0B72B9'
+const arcOrange = '#FFBA60'
 
 const theme = createMuiTheme({
   palette: {
-    primary: {
-      main: purple[500],
+    common: {
+      Blue:`${arcBlue}`,
+      Orange:`${arcOrange}`
+    },
+    primary:{
+        main:`${arcBlue}`
     },
     secondary: {
-      main: green[500],
-    },
-  },
+      main:`${arcOrange}`
+    }
+  }
 });
-  export default Theme;
+  export default theme;
