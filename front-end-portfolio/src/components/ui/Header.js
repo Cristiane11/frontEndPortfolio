@@ -20,9 +20,9 @@ function Header(props) {
     return (
       <div className="">
         <ElevationScroll>
-        <AppBar position="fixed" color="secondary">
+        <AppBar position="fixed" color="primary">
             <Toolbar>
-              <Typography variant ='h1'>
+              <Typography variant ='h6'>
               <h1>EU</h1>  
               </Typography>
                 
