@@ -22,7 +22,7 @@ function Header(props) {
         <ElevationScroll>
         <AppBar position="fixed" color="primary">
             <Toolbar>
-              <Typography variant ='h6'>
+              <Typography variant ="h6">
               <h1>EU</h1>  
               </Typography>
                 

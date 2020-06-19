@@ -20,7 +20,12 @@ const theme = createMuiTheme({
     },
     secondary: {
       main:`${arcOrange}`
+    },
+    Typography:{
+      h6:{
+      fontWeight:300
     }
+  }
     
   }
 });
