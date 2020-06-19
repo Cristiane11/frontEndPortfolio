@@ -17,6 +17,12 @@ function ElevationScroll(props) {
       elevation: trigger ? 4 : 0,
     });
   }
+  const useStyles = makeStyles(theme=>({
+    ToolbarMargin:{
+      ...theme.mixins.Toolbar
+    }
+  }))
+
 function Header(props) {
     return (
       <div className="">
