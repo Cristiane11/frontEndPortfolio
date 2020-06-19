@@ -3,6 +3,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
 
 function ElevationScroll(props) {
     const { children} = props;
@@ -22,7 +23,7 @@ function Header(props) {
         <ElevationScroll>
         <AppBar position="fixed" color="primary">
             <Toolbar>
-              <Typography variant ="h6">
+              <Typography variant ="h6" >
               <h1>EU</h1>  
               </Typography>
                 
