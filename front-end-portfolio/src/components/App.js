@@ -6,8 +6,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Header/>
-      <p>Cristiane Abreu</p>
-      <hr/>
+      Cristiane Abreu
     </ThemeProvider>
   );
 }

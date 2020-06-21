@@ -31,14 +31,14 @@ function Header(props) {
         <ElevationScroll>
         <AppBar position="fixed" color="primary">
             <Toolbar>
-              <Typography variant ="h6" >
-              <h1>EU</h1>  
+              <Typography variant ="h3">
+              Arc Development
               </Typography>
                 
             </Toolbar>
         </AppBar>
         </ElevationScroll>
-      <div className={classes.ToolbarMargin}/>
+        <div className={classes.ToolbarMargin}/>
       </React.Fragment>
       
     );

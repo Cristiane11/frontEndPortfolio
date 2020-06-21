@@ -22,7 +22,7 @@ const theme = createMuiTheme({
       main:`${arcOrange}`
     },
     Typography:{
-      h6:{
+      h3:{
       fontWeight:300
     }
   }
