@@ -14,7 +14,7 @@ function ElevationScroll(props) {
     });
   
     return React.cloneElement(children, {
-      elevation: trigger ? 4 : 0,
+      elevation: trigger ? 4 : 0
     });
   }
   const useStyles = makeStyles(theme=>({
@@ -24,8 +24,10 @@ function ElevationScroll(props) {
   }))
 
 function Header(props) {
+  const classes = useStyles()
+
     return (
-      <div className="">
+      <React.Fragment>
         <ElevationScroll>
         <AppBar position="fixed" color="primary">
             <Toolbar>
@@ -36,7 +38,9 @@ function Header(props) {
             </Toolbar>
         </AppBar>
         </ElevationScroll>
-      </div>
+      <div className={classes.ToolbarMargin}/>
+      </React.Fragment>
+      
     );
   }
   
