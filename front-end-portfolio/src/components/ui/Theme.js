@@ -23,7 +23,7 @@ const theme = createMuiTheme({
     },
     Typography:{
       h3:{
-      fontWeight:500
+      fontWeight:300
     }
   }
     
