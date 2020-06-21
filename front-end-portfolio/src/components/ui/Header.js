@@ -28,6 +28,13 @@ function ElevationScroll(props) {
     },
     logo:{
       height:'7em'
+    },
+    tabContainer:{
+      marginLeft:'auto'
+    },
+    tab:{
+      fontFamily:"Raleway",
+      textTransform:"none"
     }
   }))
 
@@ -40,12 +47,12 @@ function Header(props) {
         <AppBar position="fixed" color="primary">
             <Toolbar disableGutters>
              <img alt ='company logo' className={classes.logo} src={logo}/>   
-            <Tabs>
-              <Tab label="Home"/>
-              <Tab label="Services"/>
-              <Tab label="The Revolution"/>
-              <Tab label="About Us"/>
-              <Tab label="Contact US"/>
+            <Tabs className={classes.tabContainer}>
+              <Tab className={classes.tab} label="Home"/>
+              <Tab className={classes.tab} label="Services"/>
+              <Tab className={classes.tab} label="The Revolution"/>
+              <Tab className={classes.tab} label="About Us"/>
+              <Tab className={classes.tab} label="Contact US"/>
             </Tabs>
             
             </Toolbar>
