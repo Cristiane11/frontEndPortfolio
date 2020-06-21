@@ -33,8 +33,9 @@ function ElevationScroll(props) {
       marginLeft:'auto'
     },
     tab:{
-      fontFamily:"Raleway",
-      textTransform:"none"
+      ...theme.typography.tab,
+      mainWidth:10,
+      marginLeft:"25px"
     }
   }))
 
