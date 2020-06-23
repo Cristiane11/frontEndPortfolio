@@ -37,9 +37,13 @@ function ElevationScroll(props) {
       ...theme.typography.tab,
       mainWidth:10,
       marginLeft:"25px"
+      
     },
     button:{
-      
+      borderRadius:"50px", 
+      marginLeft:"50px",
+      marginRight:"25px"
+
     }
 
   }))
