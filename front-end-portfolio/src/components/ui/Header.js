@@ -37,7 +37,11 @@ function ElevationScroll(props) {
       ...theme.typography.tab,
       mainWidth:10,
       marginLeft:"25px"
+    },
+    button:{
+      
     }
+
   }))
 
 function Header(props) {
@@ -56,8 +60,8 @@ function Header(props) {
               <Tab className={classes.tab} label="About Us"/>
               <Tab className={classes.tab} label="Contact US"/>
             </Tabs>
-                <Button color="secondary">
-                  Free
+                <Button variant='contained'color="secondary" className={classes.button}>
+                  Free Estimate
                 </Button>
             </Toolbar>
         </AppBar>
