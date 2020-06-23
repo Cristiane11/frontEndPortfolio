@@ -4,6 +4,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import { makeStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
+import Button from '@material-ui/core/Button';
 import Tab from '@material-ui/core/Tab';
 
 import logo from '../../assets/logo.svg'
@@ -55,7 +56,9 @@ function Header(props) {
               <Tab className={classes.tab} label="About Us"/>
               <Tab className={classes.tab} label="Contact US"/>
             </Tabs>
-            
+            <Button variant="contained" color="secondary" >
+                  Free Estimate
+                </Button>
             </Toolbar>
         </AppBar>
         </ElevationScroll>
