@@ -56,8 +56,8 @@ function Header(props) {
               <Tab className={classes.tab} label="About Us"/>
               <Tab className={classes.tab} label="Contact US"/>
             </Tabs>
-            <Button variant="contained" color="secondary" >
-                  Free Estimate
+            <Button color="secondary" >
+                  Free
                 </Button>
             </Toolbar>
         </AppBar>
