@@ -51,12 +51,12 @@ function ElevationScroll(props) {
   }))
 
 function Header(props) {
-  const classes = useStyles()
+  const classes = useStyles();
 
     return (
       <React.Fragment>
         <ElevationScroll>
-        <AppBar position="fixed" color="primary">
+        <AppBar position="fixed">
             <Toolbar disableGutters>
              <img alt ='company logo' className={classes.logo} src={logo}/>   
             <Tabs className={classes.tabContainer}>
