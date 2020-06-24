@@ -22,8 +22,8 @@ function ElevationScroll(props) {
     });
   }
   const useStyles = makeStyles(theme=>({
-    ToolbarMargin:{
-      ...theme.mixins.Toolbar,
+    toolbarMargin:{
+      ...theme.mixins.toolbar,
       marginBottom:'3em'
 
     },
@@ -37,14 +37,14 @@ function ElevationScroll(props) {
       ...theme.typography.tab,
       mainWidth:10,
       marginLeft:"25px"
-      
+   
     },
     button:{
+      ...theme.typography.estimate,
       borderRadius:"50px", 
       marginLeft:"50px",
       marginRight:"25px",
-      fontFamily:"Pacifico",
-      fontSize:"1rem"
+      height:"45px"
 
     }
 
@@ -72,7 +72,7 @@ function Header(props) {
             </Toolbar>
         </AppBar>
         </ElevationScroll>
-        <div className={classes.ToolbarMargin}/>
+        <div className={classes.toolbarMargin}/>
       </React.Fragment>
       
     );
