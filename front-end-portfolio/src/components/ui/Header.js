@@ -34,13 +34,13 @@ function ElevationScroll(props) {
       marginLeft:'auto'
     },
     tab:{
-      ...theme.typography.tab,
-      mainWidth:10,
+      ...theme.palette.typography.tab,
+      minWidth:10,
       marginLeft:"25px"
    
     },
     button:{
-      ...theme.typography.estimate,
+      ...theme.palette.typography.estimate,
       borderRadius:"50px", 
       marginLeft:"50px",
       marginRight:"25px",
