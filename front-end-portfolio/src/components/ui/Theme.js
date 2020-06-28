@@ -20,7 +20,8 @@ const theme = createMuiTheme({
     },
     secondary: {
       main:`${arcOrange}`
-    },
+    }
+  },
     typography: {
       tab:{
       fontFamily:"Raleway",
@@ -34,7 +35,6 @@ const theme = createMuiTheme({
       textTransform:"none",
       color:"white"
     }
-  }
     
   }
 });

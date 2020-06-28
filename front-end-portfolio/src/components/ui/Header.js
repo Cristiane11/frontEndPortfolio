@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
@@ -34,13 +34,13 @@ function ElevationScroll(props) {
       marginLeft:'auto'
     },
     tab:{
-      ...theme.palette.typography.tab,
+      ...theme.typography.tab,
       minWidth:10,
       marginLeft:"25px"
    
     },
     button:{
-      ...theme.palette.typography.estimate,
+      ...theme.typography.estimate,
       borderRadius:"50px", 
       marginLeft:"50px",
       marginRight:"25px",
@@ -52,14 +52,14 @@ function ElevationScroll(props) {
 
 function Header(props) {
   const classes = useStyles();
-
+  const[value,setValue]=useState(0);
     return (
       <React.Fragment>
         <ElevationScroll>
         <AppBar position="fixed">
             <Toolbar disableGutters>
              <img alt ='company logo' className={classes.logo} src={logo}/>   
-            <Tabs className={classes.tabContainer}>
+            <Tabs value={value} className={classes.tabContainer}>
               <Tab className={classes.tab} label="Home"/>
               <Tab className={classes.tab} label="Services"/>
               <Tab className={classes.tab} label="The Revolution"/>
