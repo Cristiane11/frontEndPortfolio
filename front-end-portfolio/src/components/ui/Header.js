@@ -70,8 +70,10 @@ function Header(props) {
       setValue(3)
     }else if (window.location.pathname==='/contact'&& value !==4){
       setValue(4)
-    }
-  })
+    }else if (window.location.pathname==='/estimate'&& value !==5){
+      setValue(5);
+      }
+  });
 
     return (
       <React.Fragment>
@@ -85,6 +87,7 @@ function Header(props) {
               <Tab className={classes.tab} component={Link} to='/revolution' label="The Revolution"/>
               <Tab className={classes.tab}component={Link} to='/about' label="About Us"/>
               <Tab className={classes.tab}component={Link}to='/contact'  label="Contact US"/>
+             
             </Tabs>
                 <Button variant='contained'color="secondary" className={classes.button}>
                   Free Estimate
