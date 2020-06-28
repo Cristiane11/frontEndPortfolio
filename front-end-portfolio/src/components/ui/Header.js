@@ -53,13 +53,18 @@ function ElevationScroll(props) {
 function Header(props) {
   const classes = useStyles();
   const[value,setValue]=useState(0);
+  
+  const handleChange =(e,value)=>{
+    setValue(value)
+  }
+
     return (
       <React.Fragment>
         <ElevationScroll>
         <AppBar position="fixed">
             <Toolbar disableGutters>
              <img alt ='company logo' className={classes.logo} src={logo}/>   
-            <Tabs value={value} className={classes.tabContainer}>
+            <Tabs value={value} onChange={handleChange} indicatorColor="primary" className={classes.tabContainer}>
               <Tab className={classes.tab} label="Home"/>
               <Tab className={classes.tab} label="Services"/>
               <Tab className={classes.tab} label="The Revolution"/>
