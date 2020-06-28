@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Button from '@material-ui/core/Button';
 import Tab from '@material-ui/core/Tab';
+import {Link} from 'react-router-dom';
 
 import logo from '../../assets/logo.svg'
 
@@ -65,11 +66,11 @@ function Header(props) {
             <Toolbar disableGutters>
              <img alt ='company logo' className={classes.logo} src={logo}/>   
             <Tabs value={value} onChange={handleChange} indicatorColor="primary" className={classes.tabContainer}>
-              <Tab className={classes.tab} label="Home"/>
-              <Tab className={classes.tab} label="Services"/>
-              <Tab className={classes.tab} label="The Revolution"/>
-              <Tab className={classes.tab} label="About Us"/>
-              <Tab className={classes.tab} label="Contact US"/>
+              <Tab className={classes.tab} component={Link} to='/' label="Home"/>
+              <Tab className={classes.tab} component={Link} to='/services'  label="Services"/>
+              <Tab className={classes.tab} component={Link} to='/revolution' label="The Revolution"/>
+              <Tab className={classes.tab}component={Link} to='/about' label="About Us"/>
+              <Tab className={classes.tab}component={Link}to='/contact'  label="Contact US"/>
             </Tabs>
                 <Button variant='contained'color="secondary" className={classes.button}>
                   Free Estimate
