@@ -73,14 +73,16 @@ function Header(props) {
     }else if (window.location.pathname==='/estimate'&& value !==5){
       setValue(5);
       }
-  });
+  },[value]);
 
     return (
       <React.Fragment>
         <ElevationScroll>
         <AppBar position="fixed">
             <Toolbar disableGutters>
-             <img alt ='company logo' className={classes.logo} src={logo}/>   
+              <Button component={Link} to='/'>
+             <img alt ='company logo' className={classes.logo} src={logo}/> 
+             </Button>  
             <Tabs value={value} onChange={handleChange} indicatorColor="primary" className={classes.tabContainer}>
               <Tab className={classes.tab} component={Link} to='/' label="Home"/>
               <Tab className={classes.tab} component={Link} to='/services'  label="Services"/>
@@ -89,7 +91,7 @@ function Header(props) {
               <Tab className={classes.tab}component={Link}to='/contact'  label="Contact US"/>
              
             </Tabs>
-                <Button variant='contained'color="secondary" className={classes.button}>
+                <Button variant='contained'color="secondary" className={classes.button} component={Link} to='/estimate'>
                   Free Estimate
                 </Button>
             </Toolbar>
@@ -102,3 +104,4 @@ function Header(props) {
   }
   
   export default Header;
+  //Time 4:58 of the last video
