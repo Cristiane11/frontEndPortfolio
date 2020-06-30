@@ -29,7 +29,14 @@ function ElevationScroll(props) {
 
     },
     logo:{
-      height:'7em'
+      height:'8em'
+    },
+    logoContainer:{
+      padding:0,
+      "&:hover":{
+        backgroundColor:"transparent"
+      }
+
     },
     tabContainer:{
       marginLeft:'auto'
@@ -80,7 +87,7 @@ function Header(props) {
         <ElevationScroll>
         <AppBar position="fixed">
             <Toolbar disableGutters>
-              <Button component={Link} to='/'>
+              <Button component={Link} to='/' disableRipple onClick={()=>setValue(0)} className={classes.logoContainer}>
              <img alt ='company logo' className={classes.logo} src={logo}/> 
              </Button>  
             <Tabs value={value} onChange={handleChange} indicatorColor="primary" className={classes.tabContainer}>
@@ -91,7 +98,7 @@ function Header(props) {
               <Tab className={classes.tab}component={Link}to='/contact'  label="Contact US"/>
              
             </Tabs>
-                <Button variant='contained'color="secondary" className={classes.button} component={Link} to='/estimate'>
+                <Button variant='contained'color="secondary" className={classes.button}>
                   Free Estimate
                 </Button>
             </Toolbar>
@@ -104,4 +111,4 @@ function Header(props) {
   }
   
   export default Header;
-  //Time 4:58 of the last video
+  //Time 8:52 of the last video
