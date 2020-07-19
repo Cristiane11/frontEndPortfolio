@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState,useEffect, useCallback } from 'react'
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
@@ -7,8 +7,11 @@ import Tabs from '@material-ui/core/Tabs';
 import Button from '@material-ui/core/Button';
 import Tab from '@material-ui/core/Tab';
 import {Link} from 'react-router-dom';
+import Menu from '@material-ui/core/Menu';
+
 
 import logo from '../../assets/logo.svg'
+import { useIsFocusVisible } from '@material-ui/core';
 
 function ElevationScroll(props) {
     const { children} = props;
@@ -61,7 +64,9 @@ function ElevationScroll(props) {
 function Header(props) {
   const classes = useStyles();
   const[value,setValue]=useState(0);
-  
+  const [anchorEl,setAnchorEl]=useState(null)
+
+
   const handleChange =(e,value)=>{
     setValue(value);
   };
@@ -98,7 +103,7 @@ function Header(props) {
               <Tab className={classes.tab}component={Link}to='/contact'  label="Contact US"/>
              
             </Tabs>
-                <Button variant='contained'color="secondary" className={classes.button}>
+                <Button  component={Link}to='/Estimate' variant='contained'color="secondary" className={classes.button}>
                   Free Estimate
                 </Button>
             </Toolbar>
