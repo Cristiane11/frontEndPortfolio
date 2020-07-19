@@ -1,6 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Google Font
+https://fonts.google.com/specimen/Playfair+Display?selection.family=Fredericka+the+Great|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900|Sacramento&sidebar.open#standard-styles
+
+## Material UI
+https://material-ui.com/components/menus/
+
+##Material UI COlor
+https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=EC407A&secondary.color=F48FB1
 
 In the project directory, you can run:
 
