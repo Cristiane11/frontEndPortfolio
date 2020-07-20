@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 import Tab from '@material-ui/core/Tab';
 import {Link} from 'react-router-dom';
 import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
 
 
 import logo from '../../assets/logo.svg'
@@ -107,7 +108,7 @@ function Header(props) {
              </Button>  
             <Tabs value={value} onChange={handleChange} indicatorColor="primary" className={classes.tabContainer}>
               <Tab className={classes.tab} component={Link} to='/' label="Home"/>
-              <Tab aria-owns ={anchorEl ? "simple-menu " : undefined} aria-haspopup={anchorEl ? "true":undefined} className={classes.tab} component={Link} to='/services'  label="Services"/>
+              <Tab aria-owns ={anchorEl ? "simple-menu" : undefined} aria-haspopup={anchorEl ? "true":undefined} onMouseOver={event=>handleClick(event)} className={classes.tab} component={Link} to='/services'  label="Services"/>
               <Tab className={classes.tab} component={Link} to='/revolution' label="The Revolution"/>
               <Tab className={classes.tab}component={Link} to='/about' label="About Us"/>
               <Tab className={classes.tab}component={Link}to='/contact'  label="Contact US"/>
@@ -116,6 +117,11 @@ function Header(props) {
                 <Button  component={Link}to='/Estimate' variant='contained'color="secondary" className={classes.button}>
                   Free Estimate
                 </Button>
+                <Menu id="simple-menu" anchorEl={anchorEl} open={open} onClick={handleClose}>
+                    <MenuItem onClick ={handleClose}>Custom Software Developement</MenuItem>
+                    <MenuItem onClick ={handleClose}>Mobile App Developement</MenuItem>
+                    <MenuItem onClick ={handleClose}>Webiste Developement</MenuItem>
+                </Menu>
             </Toolbar>
         </AppBar>
         </ElevationScroll>
