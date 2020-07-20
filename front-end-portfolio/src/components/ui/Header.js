@@ -72,8 +72,13 @@ function Header(props) {
     setValue(value);
   };
 
-  const handleClick =(e)=>{
+  const handleClick = (e)=>{
     setAnchorEl(e.currentTarget)
+    setOpen(true)
+  }
+  const handleClose = (e) => {
+    setAnchorEl(null)
+    setOpen(false)
   }
   
   useEffect(()=>{
