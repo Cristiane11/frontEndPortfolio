@@ -107,7 +107,7 @@ function Header(props) {
              </Button>  
             <Tabs value={value} onChange={handleChange} indicatorColor="primary" className={classes.tabContainer}>
               <Tab className={classes.tab} component={Link} to='/' label="Home"/>
-              <Tab className={classes.tab} component={Link} to='/services'  label="Services"/>
+              <Tab aria-owns ={anchorEl ? "simple-menu " : undefined} aria-haspopup={anchorEl ? "true":undefined} className={classes.tab} component={Link} to='/services'  label="Services"/>
               <Tab className={classes.tab} component={Link} to='/revolution' label="The Revolution"/>
               <Tab className={classes.tab}component={Link} to='/about' label="About Us"/>
               <Tab className={classes.tab}component={Link}to='/contact'  label="Contact US"/>
