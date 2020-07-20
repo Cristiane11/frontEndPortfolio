@@ -65,11 +65,16 @@ function Header(props) {
   const classes = useStyles();
   const[value,setValue]=useState(0);
   const [anchorEl,setAnchorEl]=useState(null)
+  const[open,setOpen]=useState(false)
 
 
   const handleChange =(e,value)=>{
     setValue(value);
   };
+
+  const handleClick =(e)=>{
+    setAnchorEl(e.currentTarget)
+  }
   
   useEffect(()=>{
     if(window.location.pathname==='/'&& value !==0){
