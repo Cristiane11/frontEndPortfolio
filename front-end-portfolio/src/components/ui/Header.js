@@ -117,10 +117,10 @@ function Header(props) {
                 <Button  component={Link}to='/Estimate' variant='contained'color="secondary" className={classes.button}>
                   Free Estimate
                 </Button>
-                <Menu id="simple-menu" anchorEl={anchorEl} open={open} onClick={handleClose}>
-                    <MenuItem onClick ={handleClose}>Custom Software Developement</MenuItem>
-                    <MenuItem onClick ={handleClose}>Mobile App Developement</MenuItem>
-                    <MenuItem onClick ={handleClose}>Webiste Developement</MenuItem>
+                <Menu id="simple-menu" anchorEl={anchorEl} open={open} onClose={handleClose} MenuListProps={{onMouseLeave: handleClose}}>
+                    <MenuItem onClick ={handleClose} component={Link} to='/customosoftware'>Custom Software Developement</MenuItem>
+                    <MenuItem onClick ={handleClose} component={Link} to='/mobileapp'>Mobile App Developement</MenuItem>
+                    <MenuItem onClick ={handleClose}component={Link} to='/website'>Webiste Developement</MenuItem>
                 </Menu>
             </Toolbar>
         </AppBar>
