@@ -60,8 +60,8 @@ function ElevationScroll(props) {
 
     },
     menu:{
-      backgroundColor:theme.palette.common.blue
-
+      backgroundColor:theme.palette.common.blue,
+      color:"white"
     }
 
   }))
