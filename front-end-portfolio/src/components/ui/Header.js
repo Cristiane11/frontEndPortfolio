@@ -80,7 +80,7 @@ function Header(props) {
   const[value,setValue]=useState(0);
   const [anchorEl,setAnchorEl]=useState(null);
   const[open,setOpen]=useState(false);
-  const [selectedIndex, setSelectedIndex]= useState(0);
+  const [selectedIndex, setSelectedIndex]= useState(0)
 
 
   const handleChange =(e,value)=>{
@@ -90,11 +90,12 @@ function Header(props) {
   const handleClick = (e)=>{
     setAnchorEl(e.currentTarget)
     setOpen(true)
-  }
+  };
   const handleClose = (e) => {
     setAnchorEl(null)
     setOpen(false)
-  }
+  };
+  const menuOptions=[{name:"Services",Link:"/services"},{name:"Customo Software Development",Link:"/customosoftware"},{name:"Mobile Apps Development",Link:"/mobileapps"},{name:"Websites Development",Link:"/websites"}]
   
   useEffect(()=>{
     if(window.location.pathname==='/'&& value !==0){
