@@ -1,3 +1,4 @@
+# this is the header before
 import React, { useState,useEffect, useCallback } from 'react'
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -80,7 +81,7 @@ function Header(props) {
   const[value,setValue]=useState(0);
   const [anchorEl,setAnchorEl]=useState(null);
   const[open,setOpen]=useState(false);
-  const [selectedIndex, setSelectedIndex]= useState(0);
+  
 
 
   const handleChange =(e,value)=>{
