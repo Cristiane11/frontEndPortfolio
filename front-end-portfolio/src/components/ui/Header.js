@@ -95,7 +95,7 @@ function Header(props) {
     setAnchorEl(null)
     setOpen(false)
   };
-  const menuOptions=[{name:"Services",Link:"/services"},{name:"Customo Software Development",Link:"/customosoftware"},{name:"Mobile Apps Development",Link:"/mobileapps"},{name:"Websites Development",Link:"/websites"}]
+  const menuOptions=[{name:"Services",Link:"/services"},{name:"Custom Software Development",Link:"/customsoftware"},{name:"Mobile App Development",Link:"/mobileapps"},{name:"Websites Development",Link:"/websites"}]
   
   useEffect(()=>{
     if(window.location.pathname==='/'&& value !==0){
@@ -134,7 +134,7 @@ function Header(props) {
                 </Button>
                 <Menu id="simple-menu" anchorEl={anchorEl} open={open} onClose={handleClose} classes={{paper:classes.menu}} MenuListProps={{onMouseLeave: handleClose}}elevation={0}>
                     <MenuItem onClick ={()=>{handleClose();setValue(1)}} component={Link} to='/services' classes={{root:classes.MenuItem}}>Services</MenuItem>
-                    <MenuItem onClick ={()=>{handleClose();setValue(1)}} component={Link} to='/customosoftware' classes={{root:classes.MenuItem}}>Custom Software Developement</MenuItem>
+                    <MenuItem onClick ={()=>{handleClose();setValue(1)}} component={Link} to='/customsoftware' classes={{root:classes.MenuItem}}>Custom Software Developement</MenuItem>
                     <MenuItem onClick ={()=>{handleClose();setValue(1)}} component={Link} to='/mobileapps' classes={{root:classes.MenuItem}}>Mobile App Developement</MenuItem>
                     <MenuItem onClick ={()=>{handleClose();setValue(1)}}component={Link} to='/websites' classes={{root:classes.MenuItem}}>Webiste Developement</MenuItem>
                 </Menu>
