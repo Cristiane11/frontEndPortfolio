@@ -91,6 +91,11 @@ function Header(props) {
     setAnchorEl(e.currentTarget)
     setOpen(true)
   };
+  const handleMenuItemClick=(e,i)=>{
+    setAnchorEl(null);
+    setOpen(false);
+    setSelectedIndex(i)
+  }
   const handleClose = (e) => {
     setAnchorEl(null)
     setOpen(false)
