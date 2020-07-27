@@ -139,7 +139,7 @@ function Header(props) {
                 </Button>
                 <Menu id="simple-menu" anchorEl={anchorEl} open={open} onClose={handleClose} classes={{paper:classes.menu}} MenuListProps={{onMouseLeave: handleClose}}elevation={0}>
                     {menuOptions.map((option, i)=>(
-                      <MenuItem component={Link} to={option.Link} classes={{root:classes.MenuItem }} onClick={(event)=>{handleMenuItemClick(event,index)}}>
+                      <MenuItem component={Link} to={option.Link} classes={{root:classes.MenuItem }} onClick={(event)=>{handleMenuItemClick(event,index);setValue(1)}}selected={i===selectedIndex}>
                         {option.name}
                       </MenuItem>
                     ))}
