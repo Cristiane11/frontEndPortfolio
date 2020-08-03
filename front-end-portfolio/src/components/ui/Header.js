@@ -71,9 +71,7 @@ function ElevationScroll(props) {
         opacity:1
       }
     }
-
-
-  }))
+  }));
 
 function Header(props) {
   const classes = useStyles();
@@ -87,20 +85,20 @@ function Header(props) {
     setValue(value);
   };
 
-  const handleClick = (e)=>{
+  const handleClick = e=>{
     setAnchorEl(e.currentTarget)
     setOpen(true)
   };
-  const handleMenuItemClick=(e,i)=>{
+  const handleMenuItemClick=(e, i)=>{
     setAnchorEl(null);
     setOpen(false);
     setSelectedIndex(i)
   }
-  const handleClose = (e) => {
+  const handleClose = e => {
     setAnchorEl(null)
     setOpen(false)
   };
-  const menuOptions=[{name:"Services",Link:"/services"},{name:"Custom Software Development",Link:"/customsoftware"},{name:"Mobile App Development",Link:"/mobileapps"},{name:"Websites Development",Link:"/websites"}]
+  const menuOptions=[{name:"Services", Link:"/services"},{name:"Custom Software Development", Link:"/customsoftware"},{name:"Mobile App Development", Link:"/mobileapps"},{name:"Websites Development", Link:"/websites"}]
   
   useEffect(()=>{
     if(window.location.pathname==='/'&& value !==0){
@@ -139,7 +137,7 @@ function Header(props) {
                 </Button>
                 <Menu id="simple-menu" anchorEl={anchorEl} open={open} onClose={handleClose} classes={{paper:classes.menu}} MenuListProps={{onMouseLeave: handleClose}}elevation={0}>
                     {menuOptions.map((option, i)=>(
-                      <MenuItem component={Link} to={option.Link} classes={{root:classes.MenuItem }} onClick={(event)=>{handleMenuItemClick(event,index);setValue(1)}}selected={i===selectedIndex}>
+                      <MenuItem>
                         {option.name}
                       </MenuItem>
                     ))}
@@ -154,4 +152,4 @@ function Header(props) {
   }
   
   export default Header;
-  //Time 8:52 of the last video
+ 
