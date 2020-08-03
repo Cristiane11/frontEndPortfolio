@@ -137,7 +137,7 @@ function Header(props) {
                 </Button>
                 <Menu id="simple-menu" anchorEl={anchorEl} open={open} onClose={handleClose} classes={{paper:classes.menu}} MenuListProps={{onMouseLeave: handleClose}}elevation={0}>
                     {menuOptions.map((option, i)=>(
-                      <MenuItem>
+                      <MenuItem component={Link}  to= {option.link} classes={{root:classes.menuItem}} onClick ={(event)=>{handleMenuItemClick}}>
                         {option.name}
                       </MenuItem>
                     ))}
