@@ -114,6 +114,9 @@ function Header(props) {
     }else if (window.location.pathname==='/estimate'&& value !==5){
       setValue(5);
       }
+      switch(window.location.pathname){
+        case"/"
+      }
   },[value]);
 
     return (
@@ -137,7 +140,7 @@ function Header(props) {
                 </Button>
                 <Menu id="simple-menu" anchorEl={anchorEl} open={open} onClose={handleClose} classes={{paper:classes.menu}} MenuListProps={{onMouseLeave: handleClose}}elevation={0}>
                     {menuOptions.map((option, i)=>(
-                      <MenuItem component={Link}  to= {option.link} classes={{root:classes.menuItem}} onClick ={(event)=>{handleMenuItemClick}}>
+                      <MenuItem key={option} component={Link}  to= {option.link} classes={{root:classes.menuItem}} onClick ={(event)=>{handleMenuItemClick(event,i);setValue(1);handleClose()}}selected={i === selectedIndex && value === 1 }>
                         {option.name}
                       </MenuItem>
                     ))}
