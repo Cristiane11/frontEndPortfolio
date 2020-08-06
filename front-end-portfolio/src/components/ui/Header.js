@@ -115,7 +115,10 @@ function Header(props) {
       setValue(5);
       }
       switch(window.location.pathname){
-        case"/"
+        case "/":
+        if (value !==) {
+          setValue(0)
+        }
       }
   },[value]);
 
