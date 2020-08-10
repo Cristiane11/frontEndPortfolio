@@ -86,8 +86,8 @@ function Header(props) {
   };
 
   const handleClick = e=>{
-    setAnchorEl(e.currentTarget)
-    setOpen(true)
+    setAnchorEl(e.currentTarget);
+    setOpen(true);
   };
   const handleMenuItemClick=(e, i)=>{
     setAnchorEl(null);
@@ -114,11 +114,21 @@ function Header(props) {
     }else if (window.location.pathname==='/estimate'&& value !==5){
       setValue(5);
       }
-      switch(window.location.pathname){
+      switch (window.location.pathname){
         case "/":
-        if (value !==) {
+          if (value !==0) {
           setValue(0)
-        }
+          }
+        case "/services":
+          if (value !==1) {
+          setValue(1)
+          }
+        case "/customsoftware":
+          if (value !==2) {
+          setValue(2)
+          }
+        default:
+          break;
       }
   },[value]);
 
