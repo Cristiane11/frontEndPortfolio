@@ -121,11 +121,13 @@ function Header(props) {
           }
         case "/services":
           if (value !==1) {
-          setValue(1)
+          setValue(1);
+          setSelectedIndex(0)
           }
         case "/customsoftware":
-          if (value !==2) {
-          setValue(2)
+          if (value !==1) {
+          setValue(1);
+          setSelectedIndex(1)
           }
         default:
           break;
