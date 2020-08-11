@@ -134,6 +134,22 @@ function Header(props) {
           setValue(1);
           setSelectedIndex(2)
           }
+        case "/websites":
+          if (value !==1) {
+          setValue(1);
+          setSelectedIndex(3)
+          }
+        case "/revolution":{
+          if (value !==2) {
+          setValue(2);
+          }
+        }
+        case "/about":{
+          if (value !==3) {
+          setValue(3);
+          }
+        }
+
         default:
           break;
       }
