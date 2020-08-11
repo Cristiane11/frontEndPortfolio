@@ -129,6 +129,11 @@ function Header(props) {
           setValue(1);
           setSelectedIndex(1)
           }
+        case "/mobileapps":
+          if (value !==1) {
+          setValue(1);
+          setSelectedIndex(2)
+          }
         default:
           break;
       }
