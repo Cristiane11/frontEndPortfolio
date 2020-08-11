@@ -148,26 +148,30 @@ function Header(props) {
           if (value !==2) {
           setValue(2);
           }
+          break;
         }
-        break;
+       
         case "/about":{
           if (value !==3) {
           setValue(3);
           }
+          break;
         }
-        break;
+        
         case "/contact":{
           if (value !==4) {
           setValue(4);
           }
+          break;
         }
-        break;
+       
         case "/estimate":{
           if (value !==5) {
           setValue(5);
           }
+          break;
         }
-        break;
+        
         default:
           break;
       }
