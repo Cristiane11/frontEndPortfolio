@@ -78,7 +78,7 @@ function Header(props) {
   const[value,setValue]=useState(0);
   const [anchorEl,setAnchorEl]=useState(null);
   const[open,setOpen]=useState(false);
-  const [selectedIndex, setSelectedIndex]= useState(0)
+  const [selectedIndex, setSelectedIndex] = useState(0)
 
 
   const handleChange =(e,value)=>{
@@ -89,16 +89,16 @@ function Header(props) {
     setAnchorEl(e.currentTarget);
     setOpen(true);
   };
-  const handleMenuItemClick=(e, i)=>{
+  const handleMenuItemClick = (e, i)=>{
     setAnchorEl(null);
     setOpen(false);
     setSelectedIndex(i)
   }
   const handleClose = e => {
-    setAnchorEl(null)
-    setOpen(false)
+    setAnchorEl(null);
+    setOpen(false);
   };
-  const menuOptions=[{name:"Services", Link:"/services"},{name:"Custom Software Development", Link:"/customsoftware"},{name:"Mobile App Development", Link:"/mobileapps"},{name:"Websites Development", Link:"/websites"}]
+  const menuOptions = [{name:"Services", link:"/services"},{name:"Custom Software Development", link:"/customsoftware"},{name:"Mobile App Development", link:"/mobileapps"},{name:"Websites Development", link:"/websites"}]
   
   useEffect(()=>{
     if(window.location.pathname==='/'&& value !==0){
@@ -198,7 +198,7 @@ function Header(props) {
                 </Button>
                 <Menu id="simple-menu" anchorEl={anchorEl} open={open} onClose={handleClose} classes={{paper:classes.menu}} MenuListProps={{onMouseLeave: handleClose}}elevation={0}>
                     {menuOptions.map((option, i)=>(
-                      <MenuItem key={option} component={Link}  to= {option.link} classes={{root:classes.menuItem}} onClick ={(event)=>{handleMenuItemClick(event,i);setValue(1);handleClose()}}selected={i === selectedIndex && value === 1 }>
+                      <MenuItem key={option} component={link}  to= {option.link} classes={{root:classes.menuItem}} onClick ={(event)=>{handleMenuItemClick(event,i);setValue(1);handleClose()}}selected={i === selectedIndex && value === 1 }>
                         {option.name}
                       </MenuItem>
                     ))}
