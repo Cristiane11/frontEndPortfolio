@@ -144,35 +144,31 @@ function Header(props) {
           setSelectedIndex(3)
           }
           break;
-        case "/revolution":{
+        case "/revolution":
           if (value !==2) {
           setValue(2);
           }
           break;
-        }
        
-        case "/about":{
+        case "/about":
           if (value !==3) {
           setValue(3);
           }
           break;
-        }
         
-        case "/contact":{
+        case "/contact":
           if (value !==4) {
           setValue(4);
           }
           break;
-        }
+    
        
-        case "/estimate":{
+        case "/estimate":
           if (value !==5) {
           setValue(5);
           }
           break;
-        }
-        
-        default:
+          default:
           break;
       }
   },[value]);
