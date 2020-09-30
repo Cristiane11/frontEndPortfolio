@@ -9,8 +9,8 @@ import Tab from '@material-ui/core/Tab';
 import {Link} from 'react-router-dom';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-
-
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { useTheme } from '@material-ui/core/styles';
 import logo from '../../assets/logo.svg'
 import { useIsFocusVisible } from '@material-ui/core';
 
@@ -101,7 +101,7 @@ function Header(props) {
   const menuOptions = [{name:"Services", link:"/services"},{name:"Custom Software Development", link:"/customsoftware"},{name:"Mobile App Development", link:"/mobileapps"},{name:"Websites Development", link:"/websites"}]
   
   useEffect(()=>{
-    if(window.location.pathname==='/'&& value !==0){
+    /*if(window.location.pathname==='/'&& value !==0){
       setValue(0)
     }else if (window.location.pathname==='/services'&& value !==1){
       setValue(1)
@@ -113,7 +113,7 @@ function Header(props) {
       setValue(4)
     }else if (window.location.pathname==='/estimate'&& value !==5){
       setValue(5);
-      }
+      }*/
       switch (window.location.pathname){
         case "/":
           if (value !==0) {
@@ -181,7 +181,7 @@ function Header(props) {
               <Button component={Link} to='/' disableRipple onClick={()=>setValue(0)} className={classes.logoContainer}>
              <img alt ='company logo' className={classes.logo} src={logo}/> 
              </Button>  
-            <Tabs value={value} onChange={handleChange} indicatorColor="primary" className={classes.tabContainer}>
+              <Tabs value={value} onChange={handleChange} indicatorColor="primary" className={classes.tabContainer}>
               <Tab className={classes.tab} component={Link} to='/' label="Home"/>
               <Tab aria-owns ={anchorEl ? "simple-menu" : undefined} aria-haspopup={anchorEl ? "true":undefined} onMouseOver={event=>handleClick(event)} className={classes.tab} component={Link} to='/services'  label="Services"/>
               <Tab className={classes.tab} component={Link} to='/revolution' label="The Revolution"/>
