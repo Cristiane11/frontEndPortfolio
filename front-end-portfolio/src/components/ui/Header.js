@@ -11,6 +11,8 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
+
+
 import logo from '../../assets/logo.svg'
 import { useIsFocusVisible } from '@material-ui/core';
 
@@ -75,6 +77,8 @@ function ElevationScroll(props) {
 
 function Header(props) {
   const classes = useStyles();
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down('md'));
   const[value,setValue] = useState(0);
   const [anchorEl,setAnchorEl] = useState(null);
   const[open,setOpen] = useState(false);
@@ -173,15 +177,9 @@ function Header(props) {
       }
   },[value]);
 
-    return (
-      <React.Fragment>
-        <ElevationScroll>
-        <AppBar position="fixed">
-            <Toolbar disableGutters>
-              <Button component={Link} to='/' disableRipple onClick={()=>setValue(0)} className={classes.logoContainer}>
-             <img alt ='company logo' className={classes.logo} src={logo}/> 
-             </Button>  
-              <Tabs value={value} onChange={handleChange} indicatorColor="primary" className={classes.tabContainer}>
+  const tabs = (
+    <React.Fragment>
+      <Tabs value={value} onChange={handleChange} indicatorColor="primary" className={classes.tabContainer}>
               <Tab className={classes.tab} component={Link} to='/' label="Home"/>
               <Tab aria-owns ={anchorEl ? "simple-menu" : undefined} aria-haspopup={anchorEl ? "true":undefined} onMouseOver={event=>handleClick(event)} className={classes.tab} component={Link} to='/services'  label="Services"/>
               <Tab className={classes.tab} component={Link} to='/revolution' label="The Revolution"/>
@@ -197,6 +195,17 @@ function Header(props) {
                       <MenuItem key={option} component={Link}  to={option.link} classes={{root:classes.menuItem}} onClick ={(event)=>{handleMenuItemClick(event,i); setValue(1); handleClose()}} selected={i === selectedIndex && value ===1}>{option.name}</MenuItem>
                     ))}
                 </Menu>
+    </React.Fragment>
+  )
+    return (
+      <React.Fragment>
+        <ElevationScroll>
+        <AppBar position="fixed">
+            <Toolbar disableGutters>
+              <Button component={Link} to='/' disableRipple onClick={()=>setValue(0)} className={classes.logoContainer}>
+             <img alt ='company logo' className={classes.logo} src={logo}/> 
+             </Button>  
+              {matches ? null : tabs}
             </Toolbar>
         </AppBar>
         </ElevationScroll>
