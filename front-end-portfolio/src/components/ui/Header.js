@@ -12,11 +12,12 @@ import MenuItem from '@material-ui/core/MenuItem';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+//import {IconButton} from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
 
 import logo from '../../assets/logo.svg'
-import { useIsFocusVisible } from '@material-ui/core';
+import { useIsFocusVisible, IconButton } from '@material-ui/core';
 
 function ElevationScroll(props) {
     const { children} = props;
@@ -219,6 +220,9 @@ function Header(props) {
         <SwipeableDrawer disableBackdropTransition={!iOS} disableDiscovery={iOS}open={openDrawer} onClose={()=>setOpenDrawer(false)}onOpen={()=>setOpenDrawer(true)} >
          Example Drawer
         </SwipeableDrawer>
+        <IconButton onClick={()=>setOpenDrawer(!openDrawer)} disableRipple>
+          <MenuIcon/>
+        </IconButton>
       </React.Fragment>
     )
     return (
@@ -229,7 +233,7 @@ function Header(props) {
               <Button component={Link} to='/' disableRipple onClick={()=>setValue(0)} className={classes.logoContainer}>
              <img alt ='company logo' className={classes.logo} src={logo}/> 
              </Button>  
-              {matches ? null : tabs}
+              {matches ? drawer : tabs}
             </Toolbar>
         </AppBar>
         </ElevationScroll>
